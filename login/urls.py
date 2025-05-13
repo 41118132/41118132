@@ -1,4 +1,4 @@
-"""myproj URL Configuration
+"""login URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/3.2/topics/http/urls/
@@ -15,12 +15,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from myapp.views import sayhello,hello2,hello3,hello4
+from loginapp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', sayhello),
-    path('hello2/<str:username>', hello2),
-    path('hello3/<str:username>', hello3),
-    path('hello4/<str:username>', hello4),	
+    
+    path('', views.index),
+    path('index/', views.index),
+
+    path('login/', views.login),
+    path('logout/', views.logout),	
+	
+	path('adduser/', views.adduser),	
 ]
