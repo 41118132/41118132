@@ -45,6 +45,8 @@ CAPTCHA_NOISE_FUNCTIONS = (
      'captcha.helpers.noise_dots', #點  
 )
 
+CAPTCHA_CHALLENGE_FUNCT = 'captcha.helpers.math_challenge'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
